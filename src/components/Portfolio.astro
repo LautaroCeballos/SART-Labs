@@ -1,0 +1,380 @@
+---
+// Portfolio Section
+const projects = [
+  {
+    id: "vista-sur",
+    name: "Cabañas Vista Sur",
+    location: "San Martín de los Andes, Neuquén",
+    description:
+      "Rediseño completo con flujo de reservas integrado a SART. Foco en conversión y eliminación de intermediarios.",
+    tags: ["Diseño Web", "SART", "Reservas Directas"],
+    results: [
+      { value: "+72%", label: "Reservas directas" },
+      { value: "-35%", label: "Comisiones" },
+    ],
+    color: "from-orange-dark to-orange-mid",
+    accentColor: "#EA580C",
+  },
+  {
+    id: "rio-claro",
+    name: "Complejo Río Claro",
+    location: "Villa La Angostura, Neuquén",
+    description:
+      "Sitio nuevo desde cero con sistema de pagos online y galería interactiva. Caso de éxito en temporada alta.",
+    tags: ["Full Build", "E-Commerce", "SEO"],
+    results: [
+      { value: "3x", label: "Facturación online" },
+      { value: "+50%", label: "Tráfico orgánico" },
+    ],
+    color: "from-amber-dark to-amber-mid",
+    accentColor: "#F59E0B",
+  },
+  {
+    id: "patagonia-lodge",
+    name: "Patagonia Lodge Hotel",
+    location: "Bariloche, Río Negro",
+    description:
+      "Sitio premium para hotel boutique con sistema de habitaciones, galería de lujo e integración con SART PMS.",
+    tags: ["Hotel", "Premium", "SART PMS"],
+    results: [
+      { value: "+88%", label: "Conversión web" },
+      { value: "4.9★", label: "Satisfacción" },
+    ],
+    color: "from-orange-light to-orange-clear",
+    accentColor: "#FB923C",
+  },
+];
+---
+
+<section class="section" id="portfolio" aria-label="Portfolio">
+  <div class="container">
+    <!-- Header -->
+    <div class="section-header reveal">
+      <span class="section-label">Portfolio</span>
+      <h2 class="text-h2">
+        Proyectos que generaron<br />
+        <span class="text-gradient">resultados reales</span>
+      </h2>
+      <p class="text-body section-desc">
+        No mostramos solo diseños bonitos. Mostramos el impacto en números.
+      </p>
+    </div>
+
+    <!-- Projects grid -->
+    <div class="portfolio-grid">
+      {projects.map((project, i) => (
+        <article
+          class={`portfolio-card glass-card reveal reveal-delay-${i + 1}`}
+          id={`project-${project.id}`}
+          style={`--project-accent: ${project.accentColor};`}
+        >
+          <!-- Preview area -->
+          <div class="portfolio-preview">
+            <!-- Simulated browser-like preview -->
+            <div class="preview-chrome">
+              <div class="preview-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="preview-body">
+              <div class="preview-nav">
+                <div class="preview-logo-bar"></div>
+                <div class="preview-nav-links">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="preview-nav-btn"></div>
+              </div>
+              <div class="preview-hero-block">
+                <div class="preview-title-lines">
+                  <div class="preview-line long"></div>
+                  <div class="preview-line medium"></div>
+                </div>
+                <div class="preview-cta-mini"></div>
+              </div>
+              <div class="preview-cards-row">
+                <div class="preview-mini-card"></div>
+                <div class="preview-mini-card"></div>
+                <div class="preview-mini-card"></div>
+              </div>
+            </div>
+            <div class="preview-overlay">
+              <span>Ver caso de estudio</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M12 6l4 4-4 4" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="portfolio-info">
+            <div class="portfolio-location">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1a3.5 3.5 0 0 1 3.5 3.5C9.5 7.5 6 11 6 11S2.5 7.5 2.5 4.5A3.5 3.5 0 0 1 6 1z" stroke="currentColor" stroke-width="1.2"/><circle cx="6" cy="4.5" r="1.25" stroke="currentColor" stroke-width="1.2"/></svg>
+              {project.location}
+            </div>
+            <h3 class="portfolio-title text-h3">{project.name}</h3>
+            <p class="text-body portfolio-desc">{project.description}</p>
+
+            <!-- Tags -->
+            <div class="portfolio-tags">
+              {project.tags.map(tag => (
+                <span class="portfolio-tag">{tag}</span>
+              ))}
+            </div>
+
+            <!-- Results -->
+            <div class="portfolio-results">
+              {project.results.map(result => (
+                <div class="portfolio-result">
+                  <span class="result-value">{result.value}</span>
+                  <span class="result-label">{result.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="portfolio-cta reveal">
+      <p class="text-body">¿Querés ver más proyectos o conocer el proceso?</p>
+      <a href="#contacto" class="btn btn-ghost" id="portfolio-contact-btn">Hablemos de tu proyecto →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .portfolio-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Preview */
+  .portfolio-preview {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    height: 200px;
+    background: linear-gradient(135deg,
+      rgba(255,158,125,0.06) 0%,
+      rgba(255,245,235,0.8) 100%
+    );
+  }
+
+  .preview-chrome {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.7);
+  }
+
+  .preview-dots {
+    display: flex;
+    gap: 4px;
+  }
+
+  .preview-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.12);
+  }
+
+  .preview-body {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .preview-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.4rem;
+  }
+
+  .preview-logo-bar {
+    width: 60px;
+    height: 8px;
+    background: var(--project-accent, #3B82F6);
+    border-radius: 4px;
+    opacity: 0.6;
+  }
+
+  .preview-nav-links {
+    display: flex;
+    gap: 6px;
+  }
+
+  .preview-nav-links span {
+    width: 24px;
+    height: 6px;
+    background: rgba(0,0,0,0.08);
+    border-radius: 3px;
+  }
+
+  .preview-nav-btn {
+    width: 50px;
+    height: 16px;
+    background: var(--project-accent, #3B82F6);
+    border-radius: 4px;
+    opacity: 0.7;
+  }
+
+  .preview-hero-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.25rem;
+  }
+
+  .preview-title-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .preview-line {
+    height: 7px;
+    background: rgba(0,0,0,0.09);
+    border-radius: 3px;
+  }
+
+  .preview-line.long  { width: 90px; }
+  .preview-line.medium { width: 60px; }
+
+  .preview-cta-mini {
+    width: 70px;
+    height: 22px;
+    background: var(--project-accent, #3B82F6);
+    border-radius: 5px;
+    opacity: 0.8;
+  }
+
+  .preview-cards-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 0.25rem;
+  }
+
+  .preview-mini-card {
+    flex: 1;
+    height: 36px;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(74,44,33,0.1);
+    border-radius: 6px;
+  }
+
+  .preview-overlay {
+    position: absolute;
+    inset: 0;
+    color: #593628;
+    opacity: 0;
+    transition: var(--transition);
+    backdrop-filter: blur(4px);
+  }
+
+  .portfolio-card:hover .preview-overlay {
+    opacity: 1;
+  }
+
+  /* Info */
+  .portfolio-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+  }
+
+  .portfolio-location {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .portfolio-title {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+  }
+
+  .portfolio-desc {
+    font-size: 0.85rem;
+    flex: 1;
+  }
+
+  .portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .portfolio-tag {
+    padding: 0.2rem 0.65rem;
+    background: rgba(251, 146, 60, 0.15);
+    border: 1px solid rgba(251, 146, 60, 0.25);
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .portfolio-results {
+    display: flex;
+    gap: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .portfolio-result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .result-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+
+  .result-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+
+  /* Bottom CTA */
+  .portfolio-cta {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .portfolio-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,299 @@
+---
+// Navbar Component
+---
+
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <!-- Logo -->
+    <a href="/" class="navbar-logo" id="navbar-logo">
+      <div class="logo-icon">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="28" height="28" rx="8" fill="url(#logo-gradient)"></rect>
+          <path d="M7 14L11 10L15 14L11 18L7 14Z" fill="white" opacity="0.9"
+          ></path>
+          <path d="M13 14L17 10L21 14L17 18L13 14Z" fill="white" opacity="0.6"
+          ></path>
+          <defs>
+            <linearGradient id="logo-gradient" x1="0" y1="0" x2="28" y2="28">
+              <stop offset="0%" stop-color="#FB923C"></stop>
+              <stop offset="100%" stop-color="#FFD180"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <span class="logo-text">SART<span class="logo-accent">Labs</span></span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar-nav" id="navbar-nav" aria-label="Navegación principal">
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#sart" class="nav-link">SART</a>
+      <!-- <a href="#resultados" class="nav-link">Resultados</a> -->
+      <a href="#testimonios" class="nav-link">Testimonios</a>
+    </nav>
+
+    <!-- CTA -->
+    <div class="navbar-cta">
+      <a href="#contacto" class="btn btn-primary" id="navbar-cta-btn">
+        <span>Agendar reunión</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+          ><path
+            d="M3 8h10M9 4l4 4-4 4"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path></svg
+        >
+      </a>
+      <!-- Mobile hamburger -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#servicios" class="mobile-link">Servicios</a>
+    <a href="#portfolio" class="mobile-link">Portfolio</a>
+    <a href="#sart" class="mobile-link">SART</a>
+    <a href="#resultados" class="mobile-link">Resultados</a>
+    <a href="#testimonios" class="mobile-link">Testimonios</a>
+    <a href="#contacto" class="mobile-link mobile-link-cta">Agendar reunión →</a
+    >
+  </div>
+</header>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    height: var(--nav-height);
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+  }
+
+  .navbar.scrolled {
+    background: rgba(250, 248, 243, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom-color: var(--border);
+    box-shadow: 0 4px 30px rgba(100, 60, 0, 0.08);
+  }
+
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    flex-shrink: 0;
+    transition: var(--transition);
+  }
+
+  .navbar-logo:hover .logo-icon {
+    transform: rotate(-5deg) scale(1.05);
+  }
+
+  .logo-text {
+    color: var(--text-primary);
+  }
+  .logo-accent {
+    color: var(--blue-400);
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    padding: 0.45rem 0.9rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: var(--transition);
+    white-space: nowrap;
+  }
+
+  .nav-link:hover {
+    color: var(--text-primary);
+    background: rgba(184, 120, 10, 0.08);
+  }
+
+  .navbar-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .hamburger:hover {
+    border-color: var(--border-hover);
+    background: rgba(251, 146, 60, 0.06);
+  }
+
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: var(--text-secondary);
+    border-radius: 2px;
+    transition: var(--transition);
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem 1.5rem 1.5rem;
+    background: rgba(250, 248, 243, 0.98);
+    backdrop-filter: blur(24px);
+    border-top: 1px solid var(--border);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: var(--transition);
+    pointer-events: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+  }
+
+  .mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-link {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    border: 1px solid transparent;
+  }
+
+  .mobile-link:hover {
+    color: var(--text-primary);
+    background: rgba(251, 146, 60, 0.08);
+    border-color: var(--border);
+  }
+
+  .mobile-link-cta {
+    margin-top: 0.5rem;
+    color: var(--blue-600);
+    font-weight: 600;
+    border-color: rgba(251, 146, 60, 0.25);
+    background: rgba(251, 146, 60, 0.06);
+  }
+
+  @media (max-width: 900px) {
+    .navbar-nav {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .mobile-menu {
+      display: flex;
+    }
+    #navbar-cta-btn {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const navbar = document.getElementById("navbar")!;
+  const hamburger = document.getElementById("hamburger")!;
+  const mobileMenu = document.getElementById("mobile-menu")!;
+
+  // Scroll effect
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    },
+    { passive: true },
+  );
+
+  // Mobile menu toggle
+  hamburger.addEventListener("click", () => {
+    const isOpen = hamburger.classList.toggle("open");
+    mobileMenu.classList.toggle("open");
+    hamburger.setAttribute("aria-expanded", String(isOpen));
+    mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+  });
+
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("open");
+      mobileMenu.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", "false");
+      mobileMenu.setAttribute("aria-hidden", "true");
+    });
+  });
+</script>

@@ -1,0 +1,209 @@
+---
+// CTA Section
+---
+
+<section class="cta-section" id="contacto" aria-label="Contacto">
+  <!-- Background effects -->
+  <div class="cta-bg">
+    <div class="cta-orb-1"></div>
+    <div class="cta-orb-2"></div>
+    <div class="cta-grid"></div>
+  </div>
+
+  <div class="container cta-content">
+    <!-- Main CTA block -->
+    <div class="cta-block reveal">
+      <span class="section-label">¿Empezamos?</span>
+      <h2 class="text-h2 cta-title">
+        Transformá tu web en tu mejor<br />
+        <span class="text-gradient">máquina de reservas</span>
+      </h2>
+      <p class="text-body cta-subtitle">
+        Agendamos una reunión sin cargo de 30 minutos para analizar tu caso, 
+        entender tus objetivos y contarte exactamente cómo podemos ayudarte.
+      </p>
+
+      <!-- What you get -->
+      <div class="cta-benefits">
+        <div class="cta-benefit">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8l4 4 8-8" stroke="#FF8C00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Diagnóstico gratuito de tu situación actual
+        </div>
+        <div class="cta-benefit">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8l4 4 8-8" stroke="#FF8C00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Propuesta personalizada con resultados esperados
+        </div>
+        <div class="cta-benefit">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8l4 4 8-8" stroke="#FF8C00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Sin compromiso, sin presión
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="cta-buttons">
+        <a
+          href="https://calendly.com/sart-labs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary btn-lg"
+          id="cta-schedule-btn"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M6 2v4M14 2v4M2 9h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>Agendar reunión gratis</span>
+        </a>
+        <a
+          href="https://wa.me/5492944000000?text=Hola!%20Me%20interesa%20saber%20más%20sobre%20sus%20servicios%20para%20mi%20complejo%20turístico."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-ghost btn-lg"
+          id="cta-whatsapp-btn"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a8 8 0 0 1 6.93 12.01L18 18l-4.05-1.05A8 8 0 1 1 10 2z" stroke="#25D366" stroke-width="1.8" fill="none"/><path d="M7.5 8.5c.5 1 1.5 2.5 3 3 .5.2.8-.1 1-.3l.4-.5c.1-.2.4-.2.6-.1l1.8.9c.2.1.2.4.1.6-.5.9-1.5 1.5-2.6 1.1C9.5 12.6 7.3 10.4 7 8.8c-.1-1 .5-1.9 1.3-2.2.2-.1.5 0 .6.2l.9 1.8c.1.2 0 .5-.2.6l-.5.4c-.2.2-.3.6-.1.9z" fill="#25D366"/></svg>
+          <span>WhatsApp directo</span>
+        </a>
+      </div>
+
+      <!-- Micro trust signals -->
+      <div class="cta-trust">
+        <div class="trust-signal">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M7 4.5v3l2 1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Respondemos en menos de 24hs
+        </div>
+        <div class="trust-signal">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="5" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 5V4a2.5 2.5 0 0 1 5 0v1" stroke="currentColor" stroke-width="1.2"/></svg>
+          Reunión 100% gratuita y sin compromiso
+        </div>
+        <div class="trust-signal">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Nos adaptamos a tu presupuesto
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    position: relative;
+    padding: 7rem 0;
+    overflow: hidden;
+  }
+
+  /* Background */
+  .cta-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .cta-orb-1 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255,140,0,0.15) 0%, transparent 65%);
+    filter: blur(60px);
+    border-radius: 50%;
+  }
+
+  .cta-orb-2 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 10%;
+    top: -50%;
+    background: radial-gradient(circle, rgba(255,140,0,0.09) 0%, transparent 70%);
+    filter: blur(80px);
+    border-radius: 50%;
+  }
+
+  .cta-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,140,0,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,140,0,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-block {
+    max-width: 720px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .cta-title {
+    line-height: 1.15;
+  }
+
+  .cta-subtitle {
+    font-size: 1.05rem;
+    max-width: 560px;
+  }
+
+  .cta-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    padding: 1.25rem 1.75rem;
+    background: rgba(255, 252, 248, 0.9);
+    border: 1px solid rgba(255, 140, 0, 0.25);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 12px rgba(100,60,0,0.06);
+    width: 100%;
+  }
+
+  .cta-benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cta-trust {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trust-signal {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  @media (max-width: 600px) {
+    .cta-section { padding: 5rem 0; }
+    .cta-trust { flex-direction: column; gap: 0.5rem; }
+  }
+</style>
