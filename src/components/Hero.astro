@@ -29,33 +29,16 @@
         Eliminá la dependencia de plataformas y transformá tu web en tu mejor canal de ventas.
       </p>
 
-      <!-- Stats row -->
-      <div class="hero-stats reveal reveal-delay-3">
-        <div class="hero-stat">
-          <span class="hero-stat-number">+68%</span>
-          <span class="hero-stat-label">Reservas directas</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="hero-stat-number">-40%</span>
-          <span class="hero-stat-label">Comisiones externas</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="hero-stat-number">20+</span>
-          <span class="hero-stat-label">Complejos activos</span>
-        </div>
-      </div>
 
       <!-- CTAs -->
       <div class="hero-ctas reveal reveal-delay-4">
-        <a href="#portfolio" class="btn btn-primary btn-lg" id="hero-cta-projects">
+        <a href="#proyectos" class="btn btn-primary btn-lg" id="hero-cta-projects">
           <span>Ver proyectos</span>
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="#contacto" class="btn btn-ghost btn-lg" id="hero-cta-meeting">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="4" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M6 2v4M12 2v4M2 9h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <span>Agendar reunión</span>
+          <span>Contactar</span>
         </a>
       </div>
     </div>
@@ -97,7 +80,7 @@
               </div>
             </div>
             <div class="mock-photo-placeholder">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="rgba(251,146,60,0.1)"/><path d="M8 30l8-8 6 6 4-4 6 6" stroke="rgba(251,146,60,0.6)" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="14" r="4" stroke="rgba(251,146,60,0.6)" stroke-width="1.5"/></svg>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="rgba(105,181,120,0.10)"/><path d="M8 30l8-8 6 6 4-4 6 6" stroke="rgba(105,181,120,0.7)" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="14" r="4" stroke="rgba(105,181,120,0.7)" stroke-width="1.5"/></svg>
             </div>
           </div>
 
@@ -176,8 +159,8 @@
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(251,146,60,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(251,146,60,0.06) 1px, transparent 1px);
+      linear-gradient(rgba(105,181,120,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(105,181,120,0.07) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black 40%, transparent 100%);
     -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black 40%, transparent 100%);
@@ -201,12 +184,12 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 1rem;
-    background: rgba(251, 146, 60, 0.12);
-    border: 1px solid rgba(251, 146, 60, 0.28);
+    background: rgba(105, 181, 120, 0.12);
+    border: 1px solid rgba(105, 181, 120, 0.3);
     border-radius: 100px;
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--blue-600);
+    color: var(--green-dark);
     letter-spacing: 0.04em;
     margin-bottom: 1.5rem;
   }
@@ -246,7 +229,7 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     backdrop-filter: blur(12px);
-    box-shadow: 0 2px 16px rgba(124,45,18,0.08);
+    box-shadow: 0 2px 16px rgba(37,77,50,0.08);
     width: fit-content;
   }
 
@@ -302,7 +285,7 @@
     border: 1px solid var(--border);
     background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(20px);
-    box-shadow: var(--shadow-float), 0 0 40px rgba(251,146,60,0.1);
+    box-shadow: var(--shadow-float), 0 0 40px rgba(105,181,120,0.12);
     overflow: visible;
     animation: float 6s ease-in-out infinite;
   }
@@ -334,7 +317,7 @@
   .chrome-url {
     flex: 1;
     padding: 0.3rem 0.75rem;
-    background: rgba(251,146,60,0.05);
+    background: rgba(105,181,120,0.05);
     border: 1px solid var(--border);
     border-radius: 6px;
     font-size: 0.72rem;
@@ -361,18 +344,18 @@
     font-weight: 500;
   }
   .mock-nav.active {
-    color: var(--blue-600);
-    border-bottom: 1px solid var(--blue-600);
+    color: var(--green-dark);
+    border-bottom: 1px solid var(--green-dark);
   }
 
   .mock-book-btn {
     font-size: 0.68rem;
     font-weight: 700;
     padding: 0.35rem 0.85rem;
-    background: var(--gradient-blue);
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-accent) 100%);
     border-radius: 6px;
     color: white;
-    box-shadow: 0 2px 8px rgba(251, 146, 60, 0.25);
+    box-shadow: 0 2px 8px rgba(37, 77, 50, 0.25);
   }
 
   .mock-hero-area {
@@ -380,7 +363,7 @@
     align-items: stretch;
     gap: 1rem;
     padding: 1rem;
-    background: linear-gradient(135deg, rgba(251,146,60,0.05) 0%, transparent 100%);
+    background: linear-gradient(135deg, rgba(105,181,120,0.06) 0%, transparent 100%);
     min-height: 120px;
   }
 
@@ -422,10 +405,10 @@
     font-size: 0.68rem;
     font-weight: 700;
     padding: 0.35rem 0.85rem;
-    background: var(--gradient-blue);
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-accent) 100%);
     border-radius: 5px;
     color: white;
-    box-shadow: 0 2px 8px rgba(251, 146, 60, 0.2);
+    box-shadow: 0 2px 8px rgba(37, 77, 50, 0.2);
   }
 
   .mock-price {
@@ -442,7 +425,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(251,146,60,0.06);
+    background: rgba(105,181,120,0.07);
     border-radius: var(--radius-sm);
     border: 1px solid var(--border);
     flex-shrink: 0;
@@ -465,7 +448,7 @@
   .mock-stat-value {
     font-size: 0.85rem;
     font-weight: 800;
-    color: var(--blue-600);
+    color: var(--green-dark);
     line-height: 1;
   }
 
@@ -537,7 +520,7 @@
   .scroll-wheel {
     width: 3px;
     height: 8px;
-    background: var(--blue-500);
+    background: var(--green-accent);
     border-radius: 2px;
     animation: scroll-anim 2s ease-in-out infinite;
   }

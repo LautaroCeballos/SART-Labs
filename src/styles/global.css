@@ -1,30 +1,33 @@
 /* ============================================================
-   DESIGN TOKENS — Warm Ochre Light Theme
+   DESIGN TOKENS — SART Labs Green Brand
    ============================================================ */
 :root {
   /* Backgrounds */
-  --bg-base: #FFFBF7;
-  --bg-surface: #FFF5EA;
-  --bg-card: rgba(255, 255, 255, 0.95);
-  --bg-card-hover: rgba(255, 252, 248, 0.98);
-  --border: rgba(124, 45, 18, 0.12);
-  --border-hover: rgba(124, 45, 18, 0.32);
+  --bg-base: #F5F8F0;
+  --bg-surface: #EBF1E4;
+  --bg-card: rgba(255, 255, 255, 0.96);
+  --bg-card-hover: rgba(245, 248, 240, 0.99);
+  --bg-dark: #181D27;
+  --border: rgba(37, 77, 50, 0.14);
+  --border-hover: rgba(37, 77, 50, 0.35);
 
-  /* Purer Pastel Orange palette */
-  --blue-400: #FFD180;
-  --blue-500: #FB923C;
-  --blue-600: #7C2D12;
-  --blue-glow: rgba(251, 146, 60, 0.18);
+  /* SART Labs Green Palette */
+  --green-light: #D0DB97;   /* sand/lime — highlights on dark */
+  --green-accent: #69B578;  /* medium green — CTAs, icons */
+  --green-mid: #3A7D44;     /* forest green — hover states */
+  --green-dark: #254D32;    /* deep green — primary brand */
+  --green-darkest: #181D27; /* near-black — dark sections */
+  --green-glow: rgba(105, 181, 120, 0.22);
 
   /* Text */
-  --text-primary: #331A12;
-  --text-secondary: #5C382D;
-  --text-muted: #8F6659;
+  --text-primary: #181D27;
+  --text-secondary: #2E4D38;
+  --text-muted: #5A7A62;
 
   /* Gradients */
-  --gradient-blue: linear-gradient(135deg, #FB923C 0%, #FFD180 100%);
-  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(251, 146, 60, 0.15) 0%, transparent 70%);
-  --gradient-mesh: radial-gradient(ellipse 50% 40% at 75% 30%, rgba(251, 146, 60, 0.08) 0%, transparent 60%);
+  --gradient-blue: linear-gradient(135deg, #69B578 0%, #D0DB97 100%);
+  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(105, 181, 120, 0.18) 0%, transparent 70%);
+  --gradient-mesh: radial-gradient(ellipse 50% 40% at 75% 30%, rgba(37, 77, 50, 0.10) 0%, transparent 60%);
 
   /* Radii */
   --radius-sm: 8px;
@@ -33,9 +36,9 @@
   --radius-xl: 28px;
 
   /* Shadows */
-  --shadow-glow: 0 0 40px rgba(251, 146, 60, 0.12);
-  --shadow-card: 0 4px 24px rgba(124, 45, 18, 0.08);
-  --shadow-float: 0 20px 60px rgba(124, 45, 18, 0.12);
+  --shadow-glow: 0 0 40px rgba(105, 181, 120, 0.15);
+  --shadow-card: 0 4px 24px rgba(37, 77, 50, 0.09);
+  --shadow-float: 0 20px 60px rgba(37, 77, 50, 0.14);
 
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -211,16 +214,16 @@ button {
 }
 
 .btn-primary {
-  background: var(--gradient-blue);
+  background: var(--green-dark);
   color: #fff;
-  box-shadow: 0 4px 20px rgba(251, 146, 60, 0.35);
+  box-shadow: 0 4px 20px rgba(37, 77, 50, 0.35);
 }
 
 .btn-primary::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #D4940E 0%, #B8780A 100%);
+  background: var(--green-mid);
   opacity: 0;
   transition: var(--transition);
 }
@@ -231,7 +234,7 @@ button {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(251, 146, 60, 0.5);
+  box-shadow: 0 8px 30px rgba(105, 181, 120, 0.45);
 }
 
 .btn-primary span {
@@ -242,12 +245,12 @@ button {
 .btn-ghost {
   background: transparent;
   color: var(--text-primary);
-  border: 1.5px solid rgba(160, 106, 0, 0.3);
+  border: 1.5px solid rgba(37, 77, 50, 0.3);
 }
 
 .btn-ghost:hover {
-  background: rgba(251, 146, 60, 0.07);
-  border-color: var(--blue-500);
+  background: rgba(105, 181, 120, 0.08);
+  border-color: var(--green-accent);
   transform: translateY(-2px);
 }
 
@@ -266,7 +269,7 @@ button {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transition: var(--transition);
-  box-shadow: 0 2px 12px rgba(100, 60, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(37, 77, 50, 0.07);
 }
 
 .glass-card:hover {
@@ -284,12 +287,12 @@ button {
   align-items: center;
   gap: 0.5rem;
   padding: 0.35rem 1rem;
-  background: rgba(184, 120, 10, 0.1);
-  border: 1px solid rgba(184, 120, 10, 0.25);
+  background: rgba(105, 181, 120, 0.12);
+  border: 1px solid rgba(105, 181, 120, 0.3);
   border-radius: 100px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--blue-600);
+  color: var(--green-dark);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
@@ -299,9 +302,9 @@ button {
   content: "";
   width: 6px;
   height: 6px;
-  background: var(--blue-500);
+  background: var(--green-accent);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(184, 120, 10, 0.5);
+  box-shadow: 0 0 8px rgba(105, 181, 120, 0.6);
 }
 
 /* ============================================================
@@ -348,7 +351,7 @@ button {
 .glow-orb-blue {
   background: radial-gradient(
     circle,
-    rgba(251, 146, 60, 0.2) 0%,
+    rgba(105, 181, 120, 0.22) 0%,
     transparent 70%
   );
 }
@@ -356,7 +359,7 @@ button {
 .glow-orb-indigo {
   background: radial-gradient(
     circle,
-    rgba(124, 45, 18, 0.14) 0%,
+    rgba(37, 77, 50, 0.16) 0%,
     transparent 70%
   );
 }
@@ -370,7 +373,7 @@ button {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(124, 45, 18, 0.2),
+    rgba(37, 77, 50, 0.2),
     transparent
   );
   margin: 0;
@@ -388,12 +391,12 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(184, 120, 10, 0.35);
+  background: rgba(37, 77, 50, 0.35);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(184, 120, 10, 0.6);
+  background: rgba(105, 181, 120, 0.7);
 }
 
 /* ============================================================

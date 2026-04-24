@@ -8,7 +8,7 @@ const stats = [
     prefix: "+",
     label: "Aumento en reservas directas",
     description: "Promedio entre nuestros clientes activos en el primer año.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 17l4-5 4 4 4-6 4 3" stroke="#FB923C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 17H3" stroke="#FB923C" stroke-width="2" stroke-linecap="round"/></svg>`,
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 17l4-5 4 4 4-6 4 3" stroke="#3A7D44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 17H3" stroke="#3A7D44" stroke-width="2" stroke-linecap="round"/></svg>`,
   },
   {
     id: "comisiones",
@@ -17,7 +17,7 @@ const stats = [
     prefix: "-",
     label: "Reducción en comisiones de plataformas",
     description: "Menos dinero para Booking, Airbnb y OTAs. Más para vos.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FB923C" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#FB923C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#3A7D44" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#3A7D44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   },
   {
     id: "presencia",
@@ -26,7 +26,7 @@ const stats = [
     prefix: "",
     label: "Mejor presencia digital",
     description: "Tráfico orgánico, reputación online y visibilidad en Google.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="#FB923C" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="#FB923C" stroke-width="2" stroke-linecap="round"/></svg>`,
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="#3A7D44" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="#3A7D44" stroke-width="2" stroke-linecap="round"/></svg>`,
   },
   {
     id: "experiencia",
@@ -35,7 +35,7 @@ const stats = [
     prefix: "",
     label: "Satisfacción de clientes",
     description: "Soporte continuo y resultados que se miden y se mejoran.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" stroke="#FB923C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" stroke="#3A7D44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   },
 ];
 ---
@@ -110,7 +110,7 @@ const stats = [
     height: 500px;
     right: -150px;
     top: 0;
-    background: radial-gradient(circle, rgba(251,146,60,0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(105,181,120,0.12) 0%, transparent 70%);
     filter: blur(80px);
     pointer-events: none;
     z-index: 0;
@@ -262,3 +262,4 @@ const stats = [
 
   counters.forEach((c) => observer.observe(c));
 </script>
+

@@ -2,34 +2,26 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
-import SocialProof from "../components/SocialProof.astro";
 import Services from "../components/Services.astro";
 import Portfolio from "../components/Portfolio.astro";
 import SART from "../components/SART.astro";
-import Results from "../components/Results.astro";
-import Testimonials from "../components/Testimonials.astro";
 import CTA from "../components/CTA.astro";
 import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="SART Labs — Agencia Web para Complejos Turísticos | Más reservas directas"
-  description="Diseñamos sitios web de alta conversión para cabañas, hoteles y resorts en Argentina. Aumentá tus reservas directas y reducí comisiones de plataformas con nuestra metodología y el sistema SART PMS."
+  title="SART Labs — Agencia Web para Complejos Turísticos"
+  description="Diseñamos sitios web de alta conversión para cabañas, hoteles y resorts. Más reservas directas, menos comisiones."
 >
   <Navbar />
   <main>
     <Hero />
-    <SocialProof />
     <div class="section-divider"></div>
     <Services />
     <div class="section-divider"></div>
     <Portfolio />
     <div class="section-divider"></div>
     <SART />
-    <!-- <div class="section-divider"></div> -->
-    <!-- <Results /> -->
-    <div class="section-divider"></div>
-    <Testimonials />
     <CTA />
   </main>
   <Footer />
